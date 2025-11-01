@@ -1,50 +1,124 @@
-# Welcome to your Expo app 👋
+# AI Vault 🔐
+---
+A secure, cross-platform mobile application built with **Expo** to manage your developer resources like API keys, important websites, MFA backup codes, and more — all stored **locally and encrypted** on your device.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> 🛡️ **100% on-device. Zero cloud. Maximum privacy.**
 
-## Get started
+---
 
-1. Install dependencies
+## ✨ Features
 
+- **Categorized Storage**: Organize sensitive data into three secure categories:
+  - Websites
+  - API Keys
+  - MFA Backup Codes
+- **Biometric Authentication**: Unlock your vault using Face ID, Touch ID, or Fingerprint (`expo-local-authentication`).
+- **On-Device Encryption**: All data is encrypted at rest using `expo-secure-store`. Nothing leaves your device.
+- **Full CRUD Operations**: Add, view, edit, and delete entries with a clean, intuitive UI.
+- **Quick Search**: Instantly find any item across all categories.
+- **Import / Export**: Back up or migrate your entire vault as a password-protected JSON file.
+- **Secure Wipe**: Permanently erase all data with one tap.
+- **Dynamic Theming**: Automatic light/dark mode that follows your system preference.
+- **AI Tools Explorer**: Discover popular AI platforms and services in the “Explore” tab.
+- **Universal App**: Runs seamlessly on **iOS**, **Android**, and **Web** using a single codebase.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer              | Technology                                                                 |
+|--------------------|----------------------------------------------------------------------------|
+| Framework          | [Expo](https://expo.dev) (React Native + Web)                              |
+| Language           | TypeScript                                                                 |
+| Routing            | [Expo Router](https://docs.expo.dev/router/introduction/) (file-based)     |
+| Secure Storage     | [`expo-secure-store`](https://docs.expo.dev/versions/latest/sdk/securestore/) |
+| Biometric Auth     | [`expo-local-authentication`](https://docs.expo.dev/versions/latest/sdk/local-authentication/) |
+| Icons              | [Lucide React Native](https://lucide.dev) + [Expo Symbols](https://docs.expo.dev/versions/latest/sdk/symbols/) |
+| Styling            | Tailwind-like utility classes via `nativewind` (or inline styles)           |
+| Platform Support   | iOS, Android, Web (universal)                                              |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 18.x
+- npm or yarn
+- (Optional) Android Studio / Xcode for native simulators
+- (Optional) Physical iOS/Android device for testing
+
+### Installation
+
+1. **Clone or navigate to your project directory**
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Start the development server**
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Open the app** using one of the following:
+   - Press `a` → Open in **Android emulator**
+   - Press `i` → Open in **iOS simulator** (macOS only)
+   - Scan QR code with **Expo Go** app on your phone
+   - Press `d` → Open in **development build** (for advanced native features)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+> 💡 This project uses **file-based routing**. Edit files inside the `app/` directory to build your UI.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🧪 Development Workflow
 
-When you're ready, run:
+### Reset to a Blank Project (Optional)
+
+To start fresh while preserving the example:
 
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This moves the starter code to `app-example/` and creates an empty `app/` directory.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🔒 Security Notes
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- **No data is ever sent to the cloud** — everything stays on-device.
+- `expo-secure-store` uses platform-specific encryption:
+  - **iOS**: Keychain Services
+  - **Android**: Encrypted SharedPreferences (with Android KeyStore)
+- Biometric auth is used only as a convenience layer — the underlying data remains encrypted regardless.
+- Exported JSON backups are **not encrypted by default**. It is recommended to protect them with a password or store them in a secure location.
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 📚 Learn More
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo Documentation](https://docs.expo.dev/)
+- [Expo Router Guide](https://docs.expo.dev/router/introduction/)
+- [Learn Expo Tutorial](https://docs.expo.dev/tutorial/introduction/) – Build a universal app from scratch
+- [Expo SDK APIs](https://docs.expo.dev/versions/latest/)
+
+---
+
+## 💬 Join the Community
+
+- 🐙 [Expo on GitHub](https://github.com/expo/expo)
+- 💬 [Expo Discord](https://chat.expo.dev)
+- ▶️ [Expo YouTube](https://www.youtube.com/@expo)
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+> Built with ❤️ using **Expo** — because privacy shouldn’t be optional.
+```
